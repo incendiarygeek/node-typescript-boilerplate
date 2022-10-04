@@ -12,20 +12,20 @@ export interface envInterface {
   build: 'dev' | 'release' | ''
 
 }
+
 export default class serverFactory extends http.Server
 {
 
-  constructor ( {app}: {app:Express} )
+  constructor (app: Express )
   {
     super()
-    app.use(express.json());
+      app.use(express.json());
     app.use(cookieparser());
     app.use(express.urlencoded({ extended: false }));
     app.use( express.static( path.join( toNamespacedPath( 'public' ), 'public' ) ) );
 
-
     /*  insert routes  */
-    app.get( '/', ( req, res ) =>
+    app.get( '/', async( req, res ) =>
     {
       // console.log( req )
       res.send('root directory')
