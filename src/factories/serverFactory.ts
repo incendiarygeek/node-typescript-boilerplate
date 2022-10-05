@@ -4,7 +4,7 @@ import path from 'path';
 import cookieparser from 'cookie-parser';
 import http from 'http';
 import { toNamespacedPath } from 'path/posix';
-
+import routeDecorator from '../decorators/routeDecorator.js';
 
 
 export interface envInterface {
@@ -19,6 +19,7 @@ export default class serverFactory extends http.Server
   constructor (app: Express )
   {
     super()
+    routeDecorator(app);
       app.use(express.json());
     app.use(cookieparser());
     app.use(express.urlencoded({ extended: false }));

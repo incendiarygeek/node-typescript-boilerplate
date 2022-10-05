@@ -10,13 +10,11 @@ const routeFactory = (
     app,
     path,
     method,
-    req,
-    res,
     handler
   }: RouteFactory ) =>
 {
   console.log( dbConnection )
-  app[ method ]( path, handler( req, res ) )
+  app[ method ]( path, handler )
 
 }
 

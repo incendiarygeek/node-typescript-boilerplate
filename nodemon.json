@@ -1,0 +1,7 @@
+{
+  "ext": "js,json,ts,tsx",
+  "execMap": {
+    "ts": "ts-node-esm -P ./tsconfig.json",
+    "ext": "js,json,ts,tsx"
+  }
+}
