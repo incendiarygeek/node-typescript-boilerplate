@@ -4,6 +4,7 @@
     "sourceMap": false,
     "removeComments": true,
     "rootDir": "./src",
+    "outDir": "release"
   },
   "include": ["src/**/*"]
 }

@@ -1,6 +1,9 @@
 {
   "singleQuote": true,
   "trailingComma": "all",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "rangeStart": 10,
   "overrides": [
     {
       "files": ["*.ts", "*.mts"],
